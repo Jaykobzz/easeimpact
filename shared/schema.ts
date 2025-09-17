@@ -22,8 +22,8 @@ export type Task = typeof tasks.$inferSelect;
 
 // Category calculation helper
 export function calculateCategory(timeRating: number, valueRating: number): string {
-  const isQuick = timeRating >= 6; // 6-10 = quick (higher score = quicker)
-  const isHighValue = valueRating >= 6; // 6-10 = high value
+  const isQuick = timeRating >= 8; // 8-10 = quick (higher score = quicker)
+  const isHighValue = valueRating >= 8; // 8-10 = high value
   
   if (isQuick && isHighValue) return 'A';
   if (!isQuick && isHighValue) return 'B';
