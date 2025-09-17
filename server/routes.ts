@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { storage } from "./storage.js";
-import { insertTaskSchema } from "@shared/schema";
+import { insertTaskSchema } from "../shared/schema.js";
 import { z } from "zod";
 
 export function registerRoutes(app: Express): void {

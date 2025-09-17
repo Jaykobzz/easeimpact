@@ -1,4 +1,4 @@
-import { type Task, type InsertTask, calculateCategory } from "@shared/schema";
+import { type Task, type InsertTask, calculateCategory } from "../shared/schema.js";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
