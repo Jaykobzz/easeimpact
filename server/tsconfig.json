@@ -1,7 +1,7 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "../",
     "outDir": "./dist",
     "module": "Node16",
     "target": "ES2022",
@@ -12,5 +12,6 @@
     "noEmit": false,
     "allowImportingTsExtensions": false
   },
-  "include": ["./index.ts"]
+  "include": ["./index.ts", "./routes.ts", "./storage.ts", "../shared/**/*.ts"],
+  "exclude": ["./vite.ts", "../client", "../node_modules", "./dist"]
 }
