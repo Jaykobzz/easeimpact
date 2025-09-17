@@ -1,10 +1,9 @@
 import type { Express } from "express";
-import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import { storage } from "./storage.js";
 import { insertTaskSchema } from "@shared/schema";
 import { z } from "zod";
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export function registerRoutes(app: Express): void {
   // Task routes
   app.get("/api/tasks", async (req, res) => {
     try {
@@ -82,8 +81,4 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ error: "Failed to clear tasks" });
     }
   });
-
-  const httpServer = createServer(app);
-
-  return httpServer;
 }

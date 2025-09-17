@@ -1,12 +1,16 @@
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { registerRoutes } from "./routes.js";
 
 const app = express();
 
 app.use(express.json());
 
-// Exempel-API
+// Register API routes
+registerRoutes(app);
+
+// Health check endpoint
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
 // Serva byggd frontend
