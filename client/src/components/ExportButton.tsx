@@ -68,7 +68,7 @@ export default function ExportButton({ tasks, chartRef }: ExportButtonProps) {
             yPosition += splitDescription.length * 5;
           }
           
-          pdf.text(`  Tid: ${task.timeRating}/5, Värde: ${task.valueRating}/5`, 25, yPosition);
+          pdf.text(`  Tid: ${task.timeRating}/10, Värde: ${task.valueRating}/10`, 25, yPosition);
           yPosition += 10;
         });
         
